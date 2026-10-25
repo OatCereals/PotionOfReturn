@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="PotionOfReturn" />
+	<DisplayName value="Potion of Return" />
+	<Description value="Recall potion plus a Return Pad block. Built for 7DTD v3.1+ (Dead Hot Summer). Dedicated server only for multiplayer: XML syncs to clients; only the server needs this mod folder and DLL. Requires 0_TFP_Harmony." />
+	<Author value="Oats" />
+	<Version value="1.0.0" />
+	<Website value="" />
+</xml>

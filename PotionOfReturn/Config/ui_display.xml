@@ -1,0 +1,11 @@
+<configs>
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="porReturnPotion" display_group="groupFood">
+			<display_entry name="dPorTeleportHome" title_key="porStatTeleportHome" display_type="Percent"/>
+		</item_display_info>
+
+		<!-- Pad block-item has no effect_group display_value (xpath on auto item fails). Keep panel empty. -->
+		<item_display_info display_type="porReturnPad" display_group="groupBlocks">
+		</item_display_info>
+	</append>
+</configs>

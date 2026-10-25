@@ -1,0 +1,9 @@
+<configs>
+	<!-- Return Pad: Electrician 45 (same tier as vanilla pressure plate) -->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/display_entry[@name_key='electricianT2']/unlock_entry[@unlock_tier='1']/@item">,porReturnPad</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@name='RecipeTagUnlocked' and contains(@tags,'pressureplate')]/@tags">,porReturnPad</append>
+
+	<!-- Potion of Return: Food 51 (tier 3, special recipe) -->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[@name_key='foodT3-1,foodT3-2,foodT3-3,foodT3-4,foodT3-5']/unlock_entry[@unlock_tier='4']/@item">,drinkJarPotionOfReturn</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@name='RecipeTagUnlocked' and contains(@tags,'foodChiliDog')]/@tags">,drinkJarPotionOfReturn</append>
+</configs>

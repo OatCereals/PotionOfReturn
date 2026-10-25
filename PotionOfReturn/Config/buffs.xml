@@ -1,0 +1,46 @@
+<configs>
+	<append xpath="/buffs">
+		<!-- tooltip_key fires when the buff is added; applied after teleport lands so it is not missed. -->
+		<buff name="buffPotionOfReturnRecall" name_key="buffPotionOfReturnRecallName" description_key="buffPotionOfReturnRecallDesc" tooltip_key="buffPotionOfReturnRecallDesc" icon="ui_game_symbol_map_bed" icon_color="140,80,200">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=""/>
+			<remove_on_death value="true"/>
+		</buff>
+
+		<!-- Short-lived signal only; real drink lock is teleport sickness + debounce. -->
+		<buff name="buffPotionOfReturnDrinkPending" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<update_rate value="1"/>
+		</buff>
+
+		<!-- No tooltip_key: icon+timer only. DisableItem syncs via XML (no client DLL). -->
+		<buff name="buffPotionOfReturnTeleportSickness" name_key="buffPotionOfReturnTeleportSicknessName" description_key="buffPotionOfReturnTeleportSicknessDesc" icon="ui_game_symbol_concussion" icon_color="180,80,200">
+			<stack_type value="replace"/>
+			<duration value="5"/>
+			<display_value value="duration"/>
+			<remove_on_death value="true"/>
+
+			<effect_group>
+				<passive_effect name="DisableItem" operation="base_set" value="1" tags="food,drinks"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffPotionOfReturnMsgReturned" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message_key="potionOfReturnReturned" show_immediately="true"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffPotionOfReturnMsgPadFailed" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message_key="potionOfReturnPadFailed" show_immediately="true"/>
+			</effect_group>
+		</buff>
+	</append>
+</configs>

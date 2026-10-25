@@ -1,0 +1,27 @@
+<configs>
+
+	<append xpath="/recipes">
+
+		<recipe name="drinkJarPotionOfReturn" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable,cookingPotFood">
+
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+
+			<ingredient name="resourcePotassiumNitratePowder" count="50"/>
+
+			<ingredient name="foodHoney" count="1"/>
+
+		</recipe>
+
+
+
+		<recipe name="porReturnPad" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceElectricParts" count="100"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<ingredient name="modMeleeStunBatonRepulsor" count="5"/>
+		</recipe>
+
+	</append>
+
+</configs>
+

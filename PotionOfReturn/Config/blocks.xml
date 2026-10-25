@@ -1,0 +1,35 @@
+<configs>
+	<append xpath="/blocks">
+		<!-- Same pressure-plate look, but normal Block class: no activate menu, no wiring/power UI. -->
+		<block name="porReturnPad">
+			<property name="Extends" value="pressureplate" param1="Class,RequiredPower,Tags,FilterTags,Group,DisplayType,UnlockedBy,CanPickup,TraderStageTemplate,EconomicValue"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="porReturnPadDesc"/>
+			<property name="DisplayType" value="porReturnPad"/>
+			<property name="TintColor" value="b080ff"/>
+			<property name="CustomIcon" value="pressureplate"/>
+			<property name="CustomIconTint" value="b080ff"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<!-- Buy uses EconomicValue; sell is halved via EconomicSellScale. -->
+			<property name="EconomicValue" value="5000"/>
+			<property name="EconomicSellScale" value=".5"/>
+			<property name="TraderStageTemplate" value="electricTier3"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="CanPickup" value="true"/>
+			<property name="TakeDelay" value="5"/>
+			<property class="RepairItems">
+				<property name="resourceConcreteMix" value="5"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceElectricParts" count="0" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="0" tag="salvageHarvest"/>
+			<drop event="Destroy" name="porReturnPad" count="1"/>
+			<drop event="Fall" name="scrapMetalPile" count="0" prob="0" stick_chance="0"/>
+			<property name="SortOrder1" value="B940"/>
+			<property name="SortOrder2" value="0001"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="Tags" value=""/>
+			<property name="FilterTags" value="MC_playerBlocks"/>
+		</block>
+	</append>
+</configs>

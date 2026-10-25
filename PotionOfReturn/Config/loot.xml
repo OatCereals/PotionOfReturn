@@ -1,0 +1,40 @@
+<configs>
+	<append xpath="/lootcontainers/lootprobtemplates">
+		<lootprobtemplate name="porQuestMedicalProb">
+			<loot level="0,1" prob=".475"/>
+			<loot level="2" prob="0.025"/>
+			<loot level="3,7" prob="0"/>
+		</lootprobtemplate>
+	</append>
+
+	<!-- Halve vitamins spawn weight in main medical groups and add potion at the same tier. -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupMedicalAll']/item[@name='drugVitamins']/@loot_prob_template">medLow</set>
+	<append xpath="/lootcontainers/lootgroup[@name='groupMedicalAll']">
+		<item name="drinkJarPotionOfReturn" loot_prob_template="medLow"/>
+	</append>
+
+	<set xpath="/lootcontainers/lootgroup[@name='groupMedicalUncommon']/item[@name='drugVitamins']/@loot_prob_template">medLow</set>
+	<append xpath="/lootcontainers/lootgroup[@name='groupMedicalUncommon']">
+		<item name="drinkJarPotionOfReturn" loot_prob_template="medLow"/>
+	</append>
+
+	<set xpath="/lootcontainers/lootgroup[@name='groupZpackNurseB']/item[@name='drugVitamins']/@loot_prob_template">med</set>
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackNurseB']">
+		<item name="drinkJarPotionOfReturn" loot_prob_template="med"/>
+	</append>
+
+	<setattribute xpath="/lootcontainers/lootgroup[@name='survivalMedical']/item[@name='drugVitamins']" name="loot_prob_template">medLow</setattribute>
+	<append xpath="/lootcontainers/lootgroup[@name='survivalMedical']">
+		<item name="drinkJarPotionOfReturn" loot_prob_template="medLow"/>
+	</append>
+
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='drugVitamins']/@loot_prob_template">porQuestMedicalProb</set>
+	<append xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']">
+		<item name="drinkJarPotionOfReturn" count="1" loot_prob_template="porQuestMedicalProb"/>
+	</append>
+
+	<set xpath="/lootcontainers/lootgroup[@name='groupChemistryStationLoot02']/item[@name='drugVitamins']/@count">1</set>
+	<append xpath="/lootcontainers/lootgroup[@name='groupChemistryStationLoot02']">
+		<item name="drinkJarPotionOfReturn" count="1" loot_prob_template="medLow"/>
+	</append>
+</configs>
